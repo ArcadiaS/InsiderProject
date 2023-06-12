@@ -34,7 +34,7 @@ class MatchPlayedEvent
     public function broadcastOn(): array
     {
         return [
-            new PrivateChannel('channel-name'),
+            new PrivateChannel('competition-matches'),
         ];
     }
 }

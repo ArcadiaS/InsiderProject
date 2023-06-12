@@ -2,6 +2,7 @@
 
 namespace App\Events;
 
+use App\Models\Competition;
 use Illuminate\Broadcasting\Channel;
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Broadcasting\PresenceChannel;
@@ -14,12 +15,15 @@ class MatchUpdatedEvent
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
+    public Competition $competition;
+
     /**
      * Create a new event instance.
      */
-    public function __construct()
+    public function __construct(Competition $competition)
     {
         //
+        $this->competition = $competition;
     }
 
     /**
@@ -30,7 +34,7 @@ class MatchUpdatedEvent
     public function broadcastOn(): array
     {
         return [
-            new PrivateChannel('channel-name'),
+            new PrivateChannel('competition-updates'),
         ];
     }
 }
