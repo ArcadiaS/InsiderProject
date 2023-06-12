@@ -1,9 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
 use App\Events\MatchPlayedEvent;
 use App\Helpers\Helper;
+use App\Http\Controllers\Controller;
 use App\Http\Requests\PlayAllWeeksRequest;
 use App\Http\Requests\PlayWeekByWeekRequest;
 use App\Http\Requests\ResetAllCompetitionRequest;

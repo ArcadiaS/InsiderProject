@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
+use App\Http\Controllers\Controller;
 use App\Http\Requests\IndexCompetitionWeekRequest;
 use App\Http\Resources\CompetitionWeekResource;
 use App\Models\CompetitionWeek;
-use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 
 class CompetitionWeekController extends Controller

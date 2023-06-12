@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
 use App\Helpers\Helper;
+use App\Http\Controllers\Controller;
 use App\Http\Requests\IndexStandingRequest;
 use App\Http\Resources\StandingResource;
 use App\Models\League;
