@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->boolean('is_active')->default(true);
-            $table->foreignId('champion_team_id')->nullable()->constrained('teams');
+            $table->foreignId('champion_team_id')->nullable();
             $table->timestamps();
         });
     }
