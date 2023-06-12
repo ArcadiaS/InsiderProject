@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasManyThrough;
+use Illuminate\Database\Eloquent\Relations\MorphToMany;
 
 class Team extends Model
 {
@@ -13,6 +14,7 @@ class Team extends Model
 
     protected $fillable = [
       'name',
+      'power',
       'league_id'
     ];
 
@@ -24,5 +26,15 @@ class Team extends Model
     public function seasons(): HasManyThrough
     {
         return $this->hasManyThrough(Season::class, League::class);
+    }
+
+    public function home_competitions()
+    {
+        return $this->hasMany(Competition::class, 'home_team_id');
+    }
+
+    public function away_competitions()
+    {
+        return $this->hasMany(Competition::class, 'away_team');
     }
 }

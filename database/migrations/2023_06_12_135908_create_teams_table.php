@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('teams', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->integer('power')->default(random_int(1,100));
             $table->foreignId('league_id')->constrained()->cascadeOnUpdate();
             $table->timestamps();
         });
