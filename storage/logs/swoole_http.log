@@ -1,0 +1,153 @@
+[2023-06-12 08:47:11 #27.0]	WARNING	Server::check_worker_exit_status(): worker(pid=57, id=25) abnormal exit, status=0, signal=11
+A bug occurred in Swoole-v5.0.3, please report it.
+The Swoole developers probably don't know about it,
+and unless you report it, chances are it won't be fixed.
+You can read How to report a bug doc before submitting any bug reports:
+>> https://github.com/swoole/swoole-src/blob/master/.github/ISSUE.md 
+Please do not send bug reports in the mailing list or personal letters.
+The issue page is also suitable to submit feature requests.
+
+OS: Linux 5.10.16.3-microsoft-standard-WSL2 #1 SMP Fri Apr 2 22:23:49 UTC 2021 x86_64
+GCC_VERSION: 11.3.0
+OPENSSL_VERSION: OpenSSL 3.0.2 15 Mar 2022
+PHP_VERSION : 8.2.7
+
+[2023-06-12 08:47:58 #27.0]	INFO	Server is reloading all workers now
+[2023-06-12 08:48:28 #27.0]	INFO	Server is reloading all workers now
+[2023-06-12 08:48:57 #27.0]	INFO	Server is reloading all workers now
+[2023-06-12 08:48:57 #19.16]	WARNING	ReactorEpoll::del() (ERRNO 800): failed to delete events[fd=7, fd_type=1], it has already been removed
+[2023-06-12 08:48:57 #19.16]	WARNING	ReactorEpoll::del() (ERRNO 800): failed to delete events[fd=7, fd_type=1], it has already been removed
+[2023-06-12 08:48:57 #19.16]	WARNING	ReactorEpoll::del() (ERRNO 800): failed to delete events[fd=7, fd_type=1], it has already been removed
+[2023-06-12 08:48:57 #19.16]	WARNING	ReactorEpoll::del() (ERRNO 800): failed to delete events[fd=7, fd_type=1], it has already been removed
+[2023-06-12 08:48:57 #19.16]	WARNING	ReactorEpoll::del() (ERRNO 800): failed to delete events[fd=7, fd_type=1], it has already been removed
+[2023-06-12 08:48:57 #19.16]	WARNING	ReactorEpoll::del() (ERRNO 800): failed to delete events[fd=7, fd_type=1], it has already been removed
+[2023-06-12 08:48:57 #19.16]	WARNING	ReactorEpoll::del() (ERRNO 800): failed to delete events[fd=7, fd_type=1], it has already been removed
+[2023-06-12 08:48:57 #19.16]	WARNING	ReactorEpoll::del() (ERRNO 800): failed to delete events[fd=7, fd_type=1], it has already been removed
+[2023-06-12 08:48:57 #19.16]	WARNING	ReactorEpoll::del() (ERRNO 800): failed to delete events[fd=7, fd_type=1], it has already been removed
+[2023-06-12 08:48:57 #19.16]	WARNING	ReactorEpoll::del() (ERRNO 800): failed to delete events[fd=7, fd_type=1], it has already been removed
+[2023-06-12 08:48:57 #19.16]	WARNING	ReactorEpoll::del() (ERRNO 800): failed to delete events[fd=7, fd_type=1], it has already been removed
+[2023-06-12 08:48:57 #19.16]	WARNING	ReactorEpoll::del() (ERRNO 800): failed to delete events[fd=7, fd_type=1], it has already been removed
+[2023-06-12 08:48:57 #19.16]	WARNING	ReactorEpoll::del() (ERRNO 800): failed to delete events[fd=7, fd_type=1], it has already been removed
+[2023-06-12 08:48:57 #19.16]	WARNING	ReactorEpoll::del() (ERRNO 800): failed to delete events[fd=7, fd_type=1], it has already been removed
+[2023-06-12 08:48:57 #19.16]	WARNING	ReactorEpoll::del() (ERRNO 800): failed to delete events[fd=7, fd_type=1], it has already been removed
+[2023-06-12 08:48:57 #19.16]	WARNING	ReactorEpoll::del() (ERRNO 800): failed to delete events[fd=7, fd_type=1], it has already been removed
+[2023-06-12 08:48:57 #19.16]	WARNING	ReactorEpoll::del() (ERRNO 800): failed to delete events[fd=7, fd_type=1], it has already been removed
+[2023-06-12 08:48:57 #19.16]	WARNING	ReactorEpoll::del() (ERRNO 800): failed to delete events[fd=7, fd_type=1], it has already been removed
+[2023-06-12 08:48:57 #19.16]	WARNING	ReactorEpoll::del() (ERRNO 800): failed to delete events[fd=7, fd_type=1], it has already been removed
+[2023-06-12 08:48:57 #19.16]	WARNING	ReactorEpoll::del() (ERRNO 800): failed to delete events[fd=7, fd_type=1], it has already been removed
+[2023-06-12 08:48:57 #19.16]	WARNING	ReactorEpoll::del() (ERRNO 800): failed to delete events[fd=7, fd_type=1], it has already been removed
+[2023-06-12 08:48:57 #19.16]	WARNING	ReactorEpoll::del() (ERRNO 800): failed to delete events[fd=7, fd_type=1], it has already been removed
+[2023-06-12 08:48:57 #19.16]	WARNING	ReactorEpoll::del() (ERRNO 800): failed to delete events[fd=7, fd_type=1], it has already been removed
+[2023-06-12 08:48:57 #19.16]	WARNING	ReactorEpoll::del() (ERRNO 800): failed to delete events[fd=7, fd_type=1], it has already been removed
+[2023-06-12 08:48:57 #19.16]	WARNING	ReactorEpoll::del() (ERRNO 800): failed to delete events[fd=7, fd_type=1], it has already been removed
+[2023-06-12 08:48:57 #19.16]	WARNING	ReactorEpoll::del() (ERRNO 800): failed to delete events[fd=7, fd_type=1], it has already been removed
+[2023-06-12 08:48:57 #19.16]	WARNING	ReactorEpoll::del() (ERRNO 800): failed to delete events[fd=7, fd_type=1], it has already been removed
+[2023-06-12 08:48:57 #19.16]	WARNING	ReactorEpoll::del() (ERRNO 800): failed to delete events[fd=7, fd_type=1], it has already been removed
+[2023-06-12 08:48:57 #19.16]	WARNING	ReactorEpoll::del() (ERRNO 800): failed to delete events[fd=7, fd_type=1], it has already been removed
+[2023-06-12 13:14:24 #28.0]	WARNING	Server::check_worker_exit_status(): worker(pid=54, id=25) abnormal exit, status=0, signal=11
+A bug occurred in Swoole-v5.0.3, please report it.
+The Swoole developers probably don't know about it,
+and unless you report it, chances are it won't be fixed.
+You can read How to report a bug doc before submitting any bug reports:
+>> https://github.com/swoole/swoole-src/blob/master/.github/ISSUE.md 
+Please do not send bug reports in the mailing list or personal letters.
+The issue page is also suitable to submit feature requests.
+
+OS: Linux 5.10.16.3-microsoft-standard-WSL2 #1 SMP Fri Apr 2 22:23:49 UTC 2021 x86_64
+GCC_VERSION: 11.3.0
+OPENSSL_VERSION: OpenSSL 3.0.2 15 Mar 2022
+PHP_VERSION : 8.2.7
+
+[2023-06-12 13:21:30 #28.0]	INFO	Server is reloading all workers now
+[2023-06-12 13:22:22 #28.0]	INFO	Server is reloading all workers now
+[2023-06-12 13:22:23 #26.16]	WARNING	ReactorEpoll::del() (ERRNO 800): failed to delete events[fd=7, fd_type=1], it has already been removed
+[2023-06-12 13:22:23 #26.16]	WARNING	ReactorEpoll::del() (ERRNO 800): failed to delete events[fd=7, fd_type=1], it has already been removed
+[2023-06-12 13:22:23 #26.16]	WARNING	ReactorEpoll::del() (ERRNO 800): failed to delete events[fd=7, fd_type=1], it has already been removed
+[2023-06-12 13:22:23 #26.16]	WARNING	ReactorEpoll::del() (ERRNO 800): failed to delete events[fd=7, fd_type=1], it has already been removed
+[2023-06-12 13:22:23 #26.16]	WARNING	ReactorEpoll::del() (ERRNO 800): failed to delete events[fd=7, fd_type=1], it has already been removed
+[2023-06-12 13:22:23 #26.16]	WARNING	ReactorEpoll::del() (ERRNO 800): failed to delete events[fd=7, fd_type=1], it has already been removed
+[2023-06-12 13:22:23 #26.16]	WARNING	ReactorEpoll::del() (ERRNO 800): failed to delete events[fd=7, fd_type=1], it has already been removed
+[2023-06-12 13:22:23 #26.16]	WARNING	ReactorEpoll::del() (ERRNO 800): failed to delete events[fd=7, fd_type=1], it has already been removed
+[2023-06-12 13:22:23 #26.16]	WARNING	ReactorEpoll::del() (ERRNO 800): failed to delete events[fd=7, fd_type=1], it has already been removed
+[2023-06-12 13:22:23 #26.16]	WARNING	ReactorEpoll::del() (ERRNO 800): failed to delete events[fd=7, fd_type=1], it has already been removed
+[2023-06-12 13:22:23 #26.16]	WARNING	ReactorEpoll::del() (ERRNO 800): failed to delete events[fd=7, fd_type=1], it has already been removed
+[2023-06-12 13:22:23 #26.16]	WARNING	ReactorEpoll::del() (ERRNO 800): failed to delete events[fd=7, fd_type=1], it has already been removed
+[2023-06-12 13:22:23 #26.16]	WARNING	ReactorEpoll::del() (ERRNO 800): failed to delete events[fd=7, fd_type=1], it has already been removed
+[2023-06-12 13:22:23 #26.16]	WARNING	ReactorEpoll::del() (ERRNO 800): failed to delete events[fd=7, fd_type=1], it has already been removed
+[2023-06-12 13:22:23 #26.16]	WARNING	ReactorEpoll::del() (ERRNO 800): failed to delete events[fd=7, fd_type=1], it has already been removed
+[2023-06-12 13:22:23 #26.16]	WARNING	ReactorEpoll::del() (ERRNO 800): failed to delete events[fd=7, fd_type=1], it has already been removed
+[2023-06-12 13:22:23 #26.16]	WARNING	ReactorEpoll::del() (ERRNO 800): failed to delete events[fd=7, fd_type=1], it has already been removed
+[2023-06-12 13:22:23 #26.16]	WARNING	ReactorEpoll::del() (ERRNO 800): failed to delete events[fd=7, fd_type=1], it has already been removed
+[2023-06-12 13:22:23 #26.16]	WARNING	ReactorEpoll::del() (ERRNO 800): failed to delete events[fd=7, fd_type=1], it has already been removed
+[2023-06-12 13:22:23 #26.16]	WARNING	ReactorEpoll::del() (ERRNO 800): failed to delete events[fd=7, fd_type=1], it has already been removed
+[2023-06-12 13:22:23 #26.16]	WARNING	ReactorEpoll::del() (ERRNO 800): failed to delete events[fd=7, fd_type=1], it has already been removed
+[2023-06-12 13:22:23 #26.16]	WARNING	ReactorEpoll::del() (ERRNO 800): failed to delete events[fd=7, fd_type=1], it has already been removed
+[2023-06-12 13:22:23 #26.16]	WARNING	ReactorEpoll::del() (ERRNO 800): failed to delete events[fd=7, fd_type=1], it has already been removed
+[2023-06-12 13:22:23 #26.16]	WARNING	ReactorEpoll::del() (ERRNO 800): failed to delete events[fd=7, fd_type=1], it has already been removed
+[2023-06-12 13:22:23 #26.16]	WARNING	ReactorEpoll::del() (ERRNO 800): failed to delete events[fd=7, fd_type=1], it has already been removed
+[2023-06-12 13:22:23 #26.16]	WARNING	ReactorEpoll::del() (ERRNO 800): failed to delete events[fd=7, fd_type=1], it has already been removed
+[2023-06-12 13:22:23 #26.16]	WARNING	ReactorEpoll::del() (ERRNO 800): failed to delete events[fd=7, fd_type=1], it has already been removed
+[2023-06-12 13:22:23 #26.16]	WARNING	ReactorEpoll::del() (ERRNO 800): failed to delete events[fd=7, fd_type=1], it has already been removed
+[2023-06-12 13:22:23 #26.16]	WARNING	ReactorEpoll::del() (ERRNO 800): failed to delete events[fd=7, fd_type=1], it has already been removed
+[2023-06-12 13:22:23 #26.16]	WARNING	ReactorEpoll::del() (ERRNO 800): failed to delete events[fd=7, fd_type=1], it has already been removed
+[2023-06-12 13:22:23 #26.16]	WARNING	ReactorEpoll::del() (ERRNO 800): failed to delete events[fd=7, fd_type=1], it has already been removed
+[2023-06-12 13:42:07 #26.11]	WARNING	Socket::ssl_accept(): bad SSL client[172.21.0.1:46548], reason=1046, error_string=sslv3 alert certificate unknown
+[2023-06-12 13:42:09 #26.11]	WARNING	Socket::ssl_accept(): bad SSL client[172.21.0.1:46552], reason=1046, error_string=sslv3 alert certificate unknown
+[2023-06-12 13:42:11 #26.11]	WARNING	Socket::ssl_accept(): bad SSL client[172.21.0.1:46556], reason=1046, error_string=sslv3 alert certificate unknown
+[2023-06-12 13:42:15 #26.11]	WARNING	Socket::ssl_accept(): bad SSL client[172.21.0.1:46568], reason=1046, error_string=sslv3 alert certificate unknown
+[2023-06-12 13:43:35 #34.0]	INFO	Server is reloading all workers now
+[2023-06-12 13:43:49 #34.0]	INFO	Server is reloading all workers now
+[2023-06-12 13:46:25 #34.0]	INFO	Server is reloading all workers now
+[2023-06-12 13:46:28 #34.0]	INFO	Server is reloading all workers now
+[2023-06-12 13:52:08 #34.0]	INFO	Server is reloading all workers now
+[2023-06-12 13:52:32 #34.0]	INFO	Server is reloading all workers now
+[2023-06-12 13:52:38 #34.0]	INFO	Server is reloading all workers now
+[2023-06-12 13:53:13 #34.0]	INFO	Server is reloading all workers now
+[2023-06-12 13:53:22 #34.0]	INFO	Server is reloading all workers now
+[2023-06-12 13:53:54 #34.0]	INFO	Server is reloading all workers now
+[2023-06-12 13:56:28 #34.0]	INFO	Server is reloading all workers now
+[2023-06-12 13:56:38 #34.0]	INFO	Server is reloading all workers now
+[2023-06-12 13:57:00 #34.0]	INFO	Server is reloading all workers now
+[2023-06-12 13:57:12 #34.0]	INFO	Server is reloading all workers now
+[2023-06-12 13:57:16 #34.0]	INFO	Server is reloading all workers now
+[2023-06-12 13:57:37 #34.0]	INFO	Server is reloading all workers now
+[2023-06-12 13:58:11 #34.0]	INFO	Server is reloading all workers now
+[2023-06-12 13:58:16 #34.0]	INFO	Server is reloading all workers now
+[2023-06-12 13:58:44 #34.0]	INFO	Server is reloading all workers now
+[2023-06-12 13:58:52 #34.0]	INFO	Server is reloading all workers now
+[2023-06-12 13:59:08 #34.0]	INFO	Server is reloading all workers now
+[2023-06-12 13:59:47 #34.0]	INFO	Server is reloading all workers now
+[2023-06-12 14:01:32 #34.0]	INFO	Server is reloading all workers now
+[2023-06-12 14:01:58 #34.0]	INFO	Server is reloading all workers now
+[2023-06-12 14:02:01 #34.0]	INFO	Server is reloading all workers now
+[2023-06-12 14:02:07 #34.0]	INFO	Server is reloading all workers now
+[2023-06-12 14:02:39 #34.0]	INFO	Server is reloading all workers now
+[2023-06-12 14:11:42 #34.0]	INFO	Server is reloading all workers now
+[2023-06-12 14:12:03 #34.0]	INFO	Server is reloading all workers now
+[2023-06-12 14:12:11 #34.0]	INFO	Server is reloading all workers now
+[2023-06-12 14:12:12 #34.0]	INFO	Server is reloading all workers now
+[2023-06-12 14:12:24 #34.0]	INFO	Server is reloading all workers now
+[2023-06-12 14:12:37 #34.0]	INFO	Server is reloading all workers now
+[2023-06-12 14:12:47 #34.0]	INFO	Server is reloading all workers now
+[2023-06-12 14:12:52 #34.0]	INFO	Server is reloading all workers now
+[2023-06-12 14:13:10 #34.0]	INFO	Server is reloading all workers now
+[2023-06-12 14:13:32 #34.0]	INFO	Server is reloading all workers now
+[2023-06-12 14:13:38 #34.0]	INFO	Server is reloading all workers now
+[2023-06-12 14:13:41 #34.0]	INFO	Server is reloading all workers now
+[2023-06-12 14:13:45 #34.0]	INFO	Server is reloading all workers now
+[2023-06-12 14:13:53 #34.0]	INFO	Server is reloading all workers now
+[2023-06-12 14:14:35 #34.0]	INFO	Server is reloading all workers now
+[2023-06-12 14:15:01 #34.0]	INFO	Server is reloading all workers now
+[2023-06-12 14:15:12 #34.0]	INFO	Server is reloading all workers now
+[2023-06-12 14:15:53 #34.0]	INFO	Server is reloading all workers now
+[2023-06-12 14:16:57 #34.0]	INFO	Server is reloading all workers now
+[2023-06-12 14:20:33 #34.0]	INFO	Server is reloading all workers now
+[2023-06-12 14:20:55 #34.0]	INFO	Server is reloading all workers now
+[2023-06-12 14:21:01 #34.0]	INFO	Server is reloading all workers now
+[2023-06-12 14:21:07 #34.0]	INFO	Server is reloading all workers now
+[2023-06-12 14:31:16 #34.0]	INFO	Server is reloading all workers now
+[2023-06-12 14:31:41 #34.0]	INFO	Server is reloading all workers now
+[2023-06-12 14:31:44 #26.11]	WARNING	Socket::ssl_accept(): bad SSL client[172.21.0.1:46774], reason=1046, error_string=sslv3 alert certificate unknown
+[2023-06-12 14:32:33 #34.0]	INFO	Server is reloading all workers now
+[2023-06-12 14:32:35 #34.0]	INFO	Server is reloading all workers now
+[2023-06-12 14:32:37 #34.0]	INFO	Server is reloading all workers now
