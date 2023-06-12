@@ -23,12 +23,12 @@ class Competition extends Model
       'match_date' => 'datetime'
     ];
 
-    public function homeTeam(): BelongsTo
+    public function home_team(): BelongsTo
     {
         return $this->belongsTo(Team::class, 'home_team_id');
     }
 
-    public function awayTeam(): BelongsTo
+    public function away_team(): BelongsTo
     {
         return $this->belongsTo(Team::class, 'away_team_id');
     }
