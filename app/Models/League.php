@@ -6,6 +6,7 @@ use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class League extends Model
 {
@@ -23,4 +24,10 @@ class League extends Model
            'name' => Carbon::now()->year.'/'.Carbon::now()->addYear()->year
         ]);
     }
+
+    public function teams(): HasMany
+    {
+        return $this->hasMany(Team::class);
+    }
+
 }

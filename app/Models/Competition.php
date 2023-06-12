@@ -11,6 +11,7 @@ class Competition extends Model
     use HasFactory;
 
     protected $fillable = [
+        'league_id',
         'home_team_id',
         'away_team_id',
         'home_team_goals',
@@ -22,6 +23,11 @@ class Competition extends Model
     protected $casts = [
       'match_date' => 'datetime'
     ];
+
+    public function league(): BelongsTo
+    {
+        return $this->belongsTo(League::class);
+    }
 
     public function home_team(): BelongsTo
     {
