@@ -320,3 +320,187 @@
 #46 [internal function]: {closure}()
 #47 {main}
 "} 
+[2023-06-12 20:51:01] local.ERROR: Cannot redeclare simulateMatch() (previously declared in /var/www/html/routes/web.php:6) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Cannot redeclare simulateMatch() (previously declared in /var/www/html/routes/web.php:6) at /var/www/html/routes/web.php:6)
+[stacktrace]
+#0 {main}
+"} 
+[2023-06-12 20:51:08] local.ERROR: Cannot redeclare simulateMatch() (previously declared in /var/www/html/routes/web.php:6) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Cannot redeclare simulateMatch() (previously declared in /var/www/html/routes/web.php:6) at /var/www/html/routes/web.php:6)
+[stacktrace]
+#0 {main}
+"} 
+[2023-06-12 20:51:29] local.ERROR: Cannot redeclare simulateMatch() (previously declared in /var/www/html/routes/web.php:6) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Cannot redeclare simulateMatch() (previously declared in /var/www/html/routes/web.php:6) at /var/www/html/routes/web.php:6)
+[stacktrace]
+#0 {main}
+"} 
+[2023-06-12 20:51:38] local.ERROR: Cannot redeclare simulateMatch() (previously declared in /var/www/html/routes/web.php:6) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Cannot redeclare simulateMatch() (previously declared in /var/www/html/routes/web.php:6) at /var/www/html/routes/web.php:6)
+[stacktrace]
+#0 {main}
+"} 
+[2023-06-12 20:51:42] local.ERROR: Cannot redeclare simulateMatch() (previously declared in /var/www/html/routes/web.php:6) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Cannot redeclare simulateMatch() (previously declared in /var/www/html/routes/web.php:6) at /var/www/html/routes/web.php:6)
+[stacktrace]
+#0 {main}
+"} 
+[2023-06-12 20:51:44] local.ERROR: Cannot redeclare simulateMatch() (previously declared in /var/www/html/routes/web.php:6) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Cannot redeclare simulateMatch() (previously declared in /var/www/html/routes/web.php:6) at /var/www/html/routes/web.php:6)
+[stacktrace]
+#0 {main}
+"} 
+[2023-06-12 20:51:48] local.ERROR: Cannot redeclare simulateMatch() (previously declared in /var/www/html/routes/web.php:6) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Cannot redeclare simulateMatch() (previously declared in /var/www/html/routes/web.php:6) at /var/www/html/routes/web.php:6)
+[stacktrace]
+#0 {main}
+"} 
+[2023-06-12 20:51:56] local.ERROR: Cannot redeclare simulateMatch() (previously declared in /var/www/html/routes/web.php:6) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Cannot redeclare simulateMatch() (previously declared in /var/www/html/routes/web.php:6) at /var/www/html/routes/web.php:6)
+[stacktrace]
+#0 {main}
+"} 
+[2023-06-12 20:53:01] local.ERROR: Cannot redeclare simulateMatch() (previously declared in /var/www/html/routes/web.php:6) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Cannot redeclare simulateMatch() (previously declared in /var/www/html/routes/web.php:6) at /var/www/html/routes/web.php:6)
+[stacktrace]
+#0 {main}
+"} 
+[2023-06-12 20:53:03] local.ERROR: Cannot redeclare simulateMatch() (previously declared in /var/www/html/routes/web.php:6) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Cannot redeclare simulateMatch() (previously declared in /var/www/html/routes/web.php:6) at /var/www/html/routes/web.php:6)
+[stacktrace]
+#0 {main}
+"} 
+[2023-06-12 20:53:04] local.ERROR: Cannot redeclare simulateMatch() (previously declared in /var/www/html/routes/web.php:6) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Cannot redeclare simulateMatch() (previously declared in /var/www/html/routes/web.php:6) at /var/www/html/routes/web.php:6)
+[stacktrace]
+#0 {main}
+"} 
+[2023-06-12 20:53:04] local.ERROR: Cannot redeclare simulateMatch() (previously declared in /var/www/html/routes/web.php:6) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Cannot redeclare simulateMatch() (previously declared in /var/www/html/routes/web.php:6) at /var/www/html/routes/web.php:6)
+[stacktrace]
+#0 {main}
+"} 
+[2023-06-12 20:53:05] local.ERROR: Cannot redeclare simulateMatch() (previously declared in /var/www/html/routes/web.php:6) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Cannot redeclare simulateMatch() (previously declared in /var/www/html/routes/web.php:6) at /var/www/html/routes/web.php:6)
+[stacktrace]
+#0 {main}
+"} 
+[2023-06-12 20:53:08] local.ERROR: Cannot redeclare simulateMatch() (previously declared in /var/www/html/routes/web.php:6) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Cannot redeclare simulateMatch() (previously declared in /var/www/html/routes/web.php:6) at /var/www/html/routes/web.php:6)
+[stacktrace]
+#0 {main}
+"} 
+[2023-06-12 20:53:09] local.ERROR: Cannot redeclare simulateMatch() (previously declared in /var/www/html/routes/web.php:6) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Cannot redeclare simulateMatch() (previously declared in /var/www/html/routes/web.php:6) at /var/www/html/routes/web.php:6)
+[stacktrace]
+#0 {main}
+"} 
+[2023-06-12 20:53:10] local.ERROR: Cannot redeclare simulateMatch() (previously declared in /var/www/html/routes/web.php:6) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Cannot redeclare simulateMatch() (previously declared in /var/www/html/routes/web.php:6) at /var/www/html/routes/web.php:6)
+[stacktrace]
+#0 {main}
+"} 
+[2023-06-12 20:53:11] local.ERROR: Cannot redeclare simulateMatch() (previously declared in /var/www/html/routes/web.php:6) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Cannot redeclare simulateMatch() (previously declared in /var/www/html/routes/web.php:6) at /var/www/html/routes/web.php:6)
+[stacktrace]
+#0 {main}
+"} 
+[2023-06-12 20:54:26] local.ERROR: Cannot redeclare simulateMatch() (previously declared in /var/www/html/routes/web.php:6) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Cannot redeclare simulateMatch() (previously declared in /var/www/html/routes/web.php:6) at /var/www/html/routes/web.php:6)
+[stacktrace]
+#0 {main}
+"} 
+[2023-06-12 20:54:28] local.ERROR: Cannot redeclare simulateMatch() (previously declared in /var/www/html/routes/web.php:6) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Cannot redeclare simulateMatch() (previously declared in /var/www/html/routes/web.php:6) at /var/www/html/routes/web.php:6)
+[stacktrace]
+#0 {main}
+"} 
+[2023-06-12 20:54:30] local.ERROR: Cannot redeclare simulateMatch() (previously declared in /var/www/html/routes/web.php:6) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Cannot redeclare simulateMatch() (previously declared in /var/www/html/routes/web.php:6) at /var/www/html/routes/web.php:6)
+[stacktrace]
+#0 {main}
+"} 
+[2023-06-12 21:00:09] local.ERROR: [-4] {"exception":"[object] (Laravel\\Octane\\Exceptions\\DdException(code: 0): [-4] at /var/www/html/vendor/laravel/octane/bin/bootstrap.php:31)
+[stacktrace]
+#0 /var/www/html/routes/web.php(9): dd()
+#1 /var/www/html/routes/web.php(30): simulateMatch()
+#2 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/CallableDispatcher.php(40): Illuminate\\Routing\\RouteFileRegistrar->{closure}()
+#3 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Route.php(237): Illuminate\\Routing\\CallableDispatcher->dispatch()
+#4 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Route.php(208): Illuminate\\Routing\\Route->runCallable()
+#5 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(799): Illuminate\\Routing\\Route->run()
+#6 /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(141): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}()
+#7 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#8 /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle()
+#9 /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#10 /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle()
+#11 /var/www/html/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#12 /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle()
+#13 /var/www/html/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#14 /var/www/html/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest()
+#15 /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Session\\Middleware\\StartSession->handle()
+#16 /var/www/html/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#17 /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle()
+#18 /var/www/html/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#19 /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle()
+#20 /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#21 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(798): Illuminate\\Pipeline\\Pipeline->then()
+#22 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(777): Illuminate\\Routing\\Router->runRouteWithinStack()
+#23 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(741): Illuminate\\Routing\\Router->runRoute()
+#24 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(730): Illuminate\\Routing\\Router->dispatchToRoute()
+#25 /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(200): Illuminate\\Routing\\Router->dispatch()
+#26 /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(141): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}()
+#27 /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#28 /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
+#29 /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle()
+#30 /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#31 /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
+#32 /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle()
+#33 /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#34 /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle()
+#35 /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#36 /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle()
+#37 /var/www/html/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#38 /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Http\\Middleware\\HandleCors->handle()
+#39 /var/www/html/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#40 /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Http\\Middleware\\TrustProxies->handle()
+#41 /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#42 /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then()
+#43 /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter()
+#44 /var/www/html/vendor/laravel/octane/src/ApplicationGateway.php(34): Illuminate\\Foundation\\Http\\Kernel->handle()
+#45 /var/www/html/vendor/laravel/octane/src/Worker.php(87): Laravel\\Octane\\ApplicationGateway->handle()
+#46 /var/www/html/vendor/laravel/octane/bin/swoole-server(120): Laravel\\Octane\\Worker->handle()
+#47 [internal function]: {closure}()
+#48 {main}
+"} 
+[2023-06-12 21:00:16] local.ERROR: [1] {"exception":"[object] (Laravel\\Octane\\Exceptions\\DdException(code: 0): [1] at /var/www/html/vendor/laravel/octane/bin/bootstrap.php:31)
+[stacktrace]
+#0 /var/www/html/routes/web.php(9): dd()
+#1 /var/www/html/routes/web.php(30): simulateMatch()
+#2 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/CallableDispatcher.php(40): Illuminate\\Routing\\RouteFileRegistrar->{closure}()
+#3 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Route.php(237): Illuminate\\Routing\\CallableDispatcher->dispatch()
+#4 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Route.php(208): Illuminate\\Routing\\Route->runCallable()
+#5 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(799): Illuminate\\Routing\\Route->run()
+#6 /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(141): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}()
+#7 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#8 /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle()
+#9 /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#10 /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle()
+#11 /var/www/html/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#12 /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle()
+#13 /var/www/html/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#14 /var/www/html/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest()
+#15 /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Session\\Middleware\\StartSession->handle()
+#16 /var/www/html/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#17 /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle()
+#18 /var/www/html/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#19 /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle()
+#20 /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#21 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(798): Illuminate\\Pipeline\\Pipeline->then()
+#22 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(777): Illuminate\\Routing\\Router->runRouteWithinStack()
+#23 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(741): Illuminate\\Routing\\Router->runRoute()
+#24 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(730): Illuminate\\Routing\\Router->dispatchToRoute()
+#25 /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(200): Illuminate\\Routing\\Router->dispatch()
+#26 /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(141): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}()
+#27 /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#28 /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
+#29 /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle()
+#30 /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#31 /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
+#32 /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle()
+#33 /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#34 /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle()
+#35 /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#36 /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle()
+#37 /var/www/html/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#38 /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Http\\Middleware\\HandleCors->handle()
+#39 /var/www/html/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#40 /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Http\\Middleware\\TrustProxies->handle()
+#41 /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#42 /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then()
+#43 /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter()
+#44 /var/www/html/vendor/laravel/octane/src/ApplicationGateway.php(34): Illuminate\\Foundation\\Http\\Kernel->handle()
+#45 /var/www/html/vendor/laravel/octane/src/Worker.php(87): Laravel\\Octane\\ApplicationGateway->handle()
+#46 /var/www/html/vendor/laravel/octane/bin/swoole-server(120): Laravel\\Octane\\Worker->handle()
+#47 [internal function]: {closure}()
+#48 {main}
+"} 

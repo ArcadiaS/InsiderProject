@@ -1,19 +1,21 @@
 <?php
 
+use App\Http\Controllers\Api\LeagueController;
+use App\Http\Controllers\Api\SeasonController;
+use App\Http\Controllers\CompetitionWeekController;
+use App\Http\Controllers\SimulationController;
+use App\Http\Controllers\StandingController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-
-/*
-|--------------------------------------------------------------------------
-| API Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register API routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "api" middleware group. Make something great!
-|
-*/
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::apiResource('seasons', SeasonController::class)->only('index');
+Route::apiResource('leagues', LeagueController::class)->only('index');
+Route::apiResource('competition-weeks', CompetitionWeekController::class)->only('index');
+Route::apiResource('standings', StandingController::class);
+Route::post('play-all-weeks', [SimulationController::class, 'playAllWeeks']);
+Route::post('play-week-by-week', [SimulationController::class, 'playWeekByWeek']);
+Route::post('reset-all-data', [SimulationController::class, 'resetAllCompetitions']);

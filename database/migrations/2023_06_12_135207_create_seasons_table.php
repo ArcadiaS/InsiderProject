@@ -14,6 +14,8 @@ return new class extends Migration
         Schema::create('seasons', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->boolean('is_active')->default(true);
+            $table->foreignId('champion_team_id')->nullable()->constrained('teams');
             $table->timestamps();
         });
     }

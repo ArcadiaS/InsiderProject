@@ -17,6 +17,7 @@ return new class extends Migration
             $table->integer('power')->default(random_int(1,100));
             $table->foreignId('league_id')->constrained()->cascadeOnUpdate();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

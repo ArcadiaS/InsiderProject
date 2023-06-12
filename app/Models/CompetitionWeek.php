@@ -5,21 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class Standing extends Model
+class CompetitionWeek extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'league_id',
-        'team_id',
-        'played',
-        'won',
-        'drawn',
-        'lost',
-        'goals_for',
-        'goals_against',
-        'points',
+      'league_id',
+      'week_number',
     ];
 
     public function league(): BelongsTo
@@ -27,8 +21,8 @@ class Standing extends Model
         return $this->belongsTo(League::class);
     }
 
-    public function team(): BelongsTo
+    public function matches(): HasMany
     {
-        return $this->belongsTo(Team::class);
+        return $this->hasMany(Competition::class);
     }
 }

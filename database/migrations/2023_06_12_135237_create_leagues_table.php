@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('leagues', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->boolean('is_active')->default(true);
+            $table->unsignedInteger('current_week')->default(1);
             $table->foreignId('season_id')->constrained()->cascadeOnUpdate();
             $table->timestamps();
         });

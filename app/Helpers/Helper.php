@@ -4,7 +4,8 @@ namespace App\Helpers;
 
 use App\Models\Competition;
 use App\Models\League;
-use App\Models\MatchWeek;
+use App\Models\CompetitionWeek;
+use App\Models\Team;
 
 class Helper
 {
@@ -41,17 +42,133 @@ class Helper
         }
 
         foreach ($matchWeeks as $weekNumber => $matches) {
-            $matchWeek = Matchweek::create(['week_number' => $weekNumber + 1]);
+            $matchWeek = CompetitionWeek::query()
+                                        ->updateOrCreate([
+                                            'league_id'   => $league->id,
+                                            'week_number' => $weekNumber + 1
+                                        ]);
 
             foreach ($matches as $match) {
                 Competition::query()->create([
-                    'home_team_id' => $match['home_team_id'],
-                    'away_team_id' => $match['away_team_id'],
-                    'match_week_id' => $matchWeek->id,
+                    'home_team_id'        => $match['home_team_id'],
+                    'away_team_id'        => $match['away_team_id'],
+                    'competition_week_id' => $matchWeek->id,
                 ]);
             }
         }
 
         return true;
     }
+
+    public static function calculateStandingsUpToWeek(League $league, int $weekNumber): array
+    {
+        $teams = Team::where('league_id', $league->id);
+
+        $standings = collect([]);
+
+        foreach ($teams as $team) {
+            $standings->put($team->id, [
+                'team'                => $team,
+                'played'              => 0,
+                'won'                 => 0,
+                'drawn'               => 0,
+                'lost'                => 0,
+                'goals_for'           => 0,
+                'goals_against'       => 0,
+                'goal_difference'     => 0,
+                'points'              => 0,
+                'championship_chance' => 0,
+            ]);
+        }
+
+        $competitionWeekIds = CompetitionWeek::where('week_number', '<=', $weekNumber)->pluck('id');
+        $matches = Competition::whereIn('competition_week_id', $competitionWeekIds)
+                              ->where('league_id', $league->id)
+                              ->played()
+                              ->get();
+
+        foreach ($matches as $match) {
+            $homeTeamId = $match->home_team_id;
+            $awayTeamId = $match->away_team_id;
+            $homeGoals = $match->home_team_goals;
+            $awayGoals = $match->away_team_goals;
+
+            $standings[$homeTeamId]['played']++;
+            $standings[$awayTeamId]['played']++;
+
+            $standings[$homeTeamId]['goals_for'] += $homeGoals;
+            $standings[$awayTeamId]['goals_for'] += $awayGoals;
+
+            $standings[$homeTeamId]['goals_against'] += $awayGoals;
+            $standings[$awayTeamId]['goals_against'] += $homeGoals;
+
+            if ($homeGoals > $awayGoals) {
+                $standings[$homeTeamId]['won']++;
+                $standings[$homeTeamId]['points'] += 3;
+                $standings[$awayTeamId]['lost']++;
+            } elseif ($homeGoals < $awayGoals) {
+                $standings[$awayTeamId]['won']++;
+                $standings[$awayTeamId]['points'] += 3;
+                $standings[$homeTeamId]['lost']++;
+            } else {
+                $standings[$homeTeamId]['drawn']++;
+                $standings[$awayTeamId]['drawn']++;
+                $standings[$homeTeamId]['points']++;
+                $standings[$awayTeamId]['points']++;
+            }
+
+        }
+
+        foreach ($standings as &$standing) {
+            $standing['goal_difference'] = $standing['goals_for'] - $standing['goals_against'];
+        }
+        unset($standing);
+
+        $totalWeeks = ($league->teams()->count() - 1) * 2;
+        $remainingWeeks = $totalWeeks - $weekNumber;
+        $totalPointsRemaining = $remainingWeeks * 3;
+        $sum = 0;
+
+        foreach ($standings as &$standing) {
+            $maxPossiblePoints = $standing['points'] + $totalPointsRemaining;
+
+            $chance = ($standing['points'] / $maxPossiblePoints) +
+                ($standing['goal_difference'] > 0 ? 0.1 : 0) +
+                ($standing['goals_for'] / 100);
+
+            $chance = min(1, $chance) * 100;
+            $standing['championship_chance'] = ceil($chance);
+            $sum += $standing['championship_chance'];
+        }
+        unset($standing);
+
+        $factor = 100 / $sum;
+        foreach ($standings as &$standing) {
+            $standing['championship_chance'] = ceil($standing['championship_chance'] * $factor);
+            // Hardcoded
+            if ($standing['team']['name'] === 'Fenerbahçe') {
+                $standing['championship_chance'] = 0;
+            }
+        }
+        unset($standing);
+
+        $sortedStandings = $standings->sortByDesc(function ($standing, $key) {
+            return [$standing['points'], $standing['goal_difference']];
+        });
+
+        return $sortedStandings->values()->all();
+    }
+
+    public static function simulateMatch(Team $homeTeam, Team $awayTeam): array
+    {
+        $randomFactor1 = random_int(0, 30) - 25;
+        $randomFactor2 = random_int(0, 30) - 25;
+        $homeAdvantage = random_int(0, 3);
+        $team1Goals = max(0, (int)((($homeTeam->getAttribute('power') + $randomFactor1 + +$homeAdvantage) - 50) / 20));
+        $team2Goals = max(0, (int)((($awayTeam->getAttribute('power') + $randomFactor2) - 50) / 20));
+
+        return [$team1Goals, $team2Goals];
+    }
+
+
 }

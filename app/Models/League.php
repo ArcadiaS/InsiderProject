@@ -14,20 +14,28 @@ class League extends Model
 
     protected $fillable = [
       'name',
-      'is_active',
+      'current_week',
       'season_id',
     ];
 
     public function season(): BelongsTo
     {
-        return $this->belongsTo(Season::class)->withDefault([
-           'name' => Carbon::now()->year.'/'.Carbon::now()->addYear()->year
-        ]);
+        return $this->belongsTo(Season::class);
     }
 
     public function teams(): HasMany
     {
         return $this->hasMany(Team::class);
+    }
+
+    public function competition_matches(): HasMany
+    {
+        return $this->hasMany(Competition::class);
+    }
+
+    public function competition_weeks(): HasMany
+    {
+        return $this->hasMany(CompetitionWeek::class);
     }
 
 }

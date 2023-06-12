@@ -11,8 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('match_weeks', function (Blueprint $table) {
+        Schema::create('competition_weeks', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('league_id')->constrained()->cascadeOnUpdate();
             $table->unsignedInteger('week_number');
             $table->timestamps();
         });
@@ -23,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('match_weeks');
+        Schema::dropIfExists('competition_weeks');
     }
 };

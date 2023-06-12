@@ -16,13 +16,20 @@ class Competition extends Model
         'away_team_id',
         'home_team_goals',
         'away_team_goals',
-        'match_week_id',
+        'competition_week_id',
         'match_date',
+        'is_played',
     ];
 
     protected $casts = [
-      'match_date' => 'datetime'
+        'match_date' => 'datetime',
+        'is_played'     => 'bool',
     ];
+
+    public function scopePlayed($query)
+    {
+        return $query->where('is_played', 1);
+    }
 
     public function league(): BelongsTo
     {
@@ -39,8 +46,8 @@ class Competition extends Model
         return $this->belongsTo(Team::class, 'away_team_id');
     }
 
-    public function match_week(): BelongsTo
+    public function competition_week(): BelongsTo
     {
-        return $this->belongsTo(MatchWeek::class);
+        return $this->belongsTo(CompetitionWeek::class);
     }
 }

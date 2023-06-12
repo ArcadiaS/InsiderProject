@@ -18,8 +18,9 @@ return new class extends Migration
             $table->foreignId('away_team_id')->constrained('teams');
             $table->integer('home_team_goals')->default(0);
             $table->integer('away_team_goals')->default(0);
-            $table->foreignId('match_week_id')->constrained();
+            $table->foreignId('competition_week_id')->constrained();
             $table->dateTime('match_date')->default(null);
+            $table->boolean('is_played')->default(false);
             $table->timestamps();
         });
     }
