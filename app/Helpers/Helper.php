@@ -50,6 +50,7 @@ class Helper
 
             foreach ($matches as $match) {
                 Competition::query()->create([
+                    'league_id'           => $league->id,
                     'home_team_id'        => $match['home_team_id'],
                     'away_team_id'        => $match['away_team_id'],
                     'competition_week_id' => $matchWeek->id,
@@ -62,12 +63,12 @@ class Helper
 
     public static function calculateStandingsUpToWeek(League $league, int $weekNumber): array
     {
-        $teams = Team::where('league_id', $league->id);
+        $teams = Team::where('league_id', $league->id)->get();
 
-        $standings = collect([]);
+        $standings = [];
 
         foreach ($teams as $team) {
-            $standings->put($team->id, [
+            $standings[$team->id] = [
                 'team'                => $team,
                 'played'              => 0,
                 'won'                 => 0,
@@ -78,7 +79,7 @@ class Helper
                 'goal_difference'     => 0,
                 'points'              => 0,
                 'championship_chance' => 0,
-            ]);
+            ];
         }
 
         $competitionWeekIds = CompetitionWeek::where('week_number', '<=', $weekNumber)->pluck('id');
@@ -152,11 +153,25 @@ class Helper
         }
         unset($standing);
 
-        $sortedStandings = $standings->sortByDesc(function ($standing, $key) {
-            return [$standing['points'], $standing['goal_difference']];
+        usort($standings, function ($a, $b) {
+            if ($a['points'] > $b['points']) {
+                return -1;
+            }
+            if ($a['points'] < $b['points']) {
+                return 1;
+            }
+
+            if ($a['goal_difference'] > $b['goal_difference']) {
+                return -1;
+            }
+            if ($a['goal_difference'] < $b['goal_difference']) {
+                return 1;
+            }
+
+            return 0;
         });
 
-        return $sortedStandings->values()->all();
+        return $standings;
     }
 
     public static function simulateMatch(Team $homeTeam, Team $awayTeam): array

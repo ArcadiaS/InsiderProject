@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use App\Models\Season;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Foundation\Testing\WithFaker;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\League>
@@ -18,9 +19,9 @@ class LeagueFactory extends Factory
     public function definition(): array
     {
         return [
-            'name'      => $this->faker->name,
-            'is_active' => $this->faker->boolean,
-            'season_id' => Season::factory()->create()
+            'name'         => $this->faker->sentence(),
+            'current_week' => 1,
+            'season_id'    => Season::factory()->create()
         ];
     }
 }
