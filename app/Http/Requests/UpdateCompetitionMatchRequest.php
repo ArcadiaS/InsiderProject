@@ -22,8 +22,8 @@ class UpdateCompetitionMatchRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'home_team_goals' => ['required', 'number', 'min:0'],
-            'away_team_goals' => ['required', 'number', 'min:0'],
+            'home_team_goals' => ['required', 'integer', 'min:0'],
+            'away_team_goals' => ['required', 'integer', 'min:0'],
         ];
     }
 }

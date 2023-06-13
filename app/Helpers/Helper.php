@@ -133,30 +133,41 @@ class Helper
         $totalWeeks = ($league->teams()->count() - 1) * 2;
         $remainingWeeks = $totalWeeks - $weekNumber;
         $totalPointsRemaining = $remainingWeeks * 3;
-        $sum = 0;
+        $currentLeaderPoints = array_reduce($standings, function ($max, $item) {
+            return max($max, $item['points']);
+        }, 0);
 
         foreach ($standings as &$standing) {
             $maxPossiblePoints = $standing['points'] + $totalPointsRemaining;
 
-            $chance = ($standing['points'] / $maxPossiblePoints) +
-                ($standing['goal_difference'] > 0 ? 0.1 : 0) +
-                ($standing['goals_for'] / 100);
+            $mathematicallyPossible = $maxPossiblePoints >= $currentLeaderPoints;
+            if (!$mathematicallyPossible) {
+                $standing['championship_chance'] = 0;
+                continue;
+            }
+            $pointDifference = $currentLeaderPoints - $standing['points'];
+            $pointsFactor = $standing['points'] /( $currentLeaderPoints + exp($pointDifference)) ;
+
+            $goalDifferenceFactor = $standing['goal_difference'] > 0 ? 0.1 : 0;
+            $teamPower = $standing['team']['power'] / 100;
+
+            $chance = (0.55 * $pointsFactor) + (0.15 * $goalDifferenceFactor) + (0.3 * $teamPower);
 
             $chance = min(1, $chance) * 100;
-            $standing['championship_chance'] = ceil($chance);
-            $sum += $standing['championship_chance'];
+
+            $standing['championship_chance'] = ($chance);
         }
         unset($standing);
 
-        $factor = 100 / $sum;
+        $sumOfChances = array_sum(array_column($standings, 'championship_chance'));
         foreach ($standings as &$standing) {
-            $standing['championship_chance'] = ceil($standing['championship_chance'] * $factor);
-            // Hardcoded
-            if ($standing['team']['name'] === 'Fenerbahçe') {
-                $standing['championship_chance'] = 0;
+            if ($sumOfChances > 0) {
+                $chance = ($standing['championship_chance'] / $sumOfChances) * 100;
+                $standing['championship_chance'] = round($chance);
             }
         }
         unset($standing);
+
 
         usort($standings, function ($a, $b) {
             if ($a['points'] > $b['points']) {
@@ -191,7 +202,7 @@ class Helper
         $team1Goals = max(0, (int)($team1ExpectedGoals));
         $team2Goals = max(0, (int)($team2ExpectedGoals));
 
-        print_r($team1Goals.'---'. $team2Goals);
+        print_r($team1Goals . '---' . $team2Goals);
         return [$team1Goals, $team2Goals];
     }
 

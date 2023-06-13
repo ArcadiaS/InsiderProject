@@ -19,6 +19,6 @@ class StandingController extends Controller
             ->where('season_id', $request->get('season_id'))
             ->firstOrFail();
 
-        return StandingResource::make(Helper::calculateStandingsUpToWeek($league, $request->get('week_number')));
+        return StandingResource::collection(Helper::calculateStandingsUpToWeek($league, $request->get('week_number')));
     }
 }

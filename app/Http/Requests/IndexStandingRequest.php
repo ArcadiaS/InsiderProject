@@ -27,7 +27,7 @@ class IndexStandingRequest extends FormRequest
             'season_id'   => ['required', Rule::exists('seasons', 'id')],
             'week_number' => [
                 'required',
-                'number',
+                'integer',
                 Rule::exists('competition_weeks', 'id'),
             ]
         ];
