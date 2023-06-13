@@ -181,12 +181,17 @@ class Helper
 
     public static function simulateMatch(Team $homeTeam, Team $awayTeam): array
     {
-        $randomFactor1 = random_int(0, 30) - 25;
-        $randomFactor2 = random_int(0, 30) - 25;
-        $homeAdvantage = random_int(0, 3);
-        $team1Goals = max(0, (int)((($homeTeam->getAttribute('power') + $randomFactor1 + +$homeAdvantage) - 50) / 20));
-        $team2Goals = max(0, (int)((($awayTeam->getAttribute('power') + $randomFactor2) - 50) / 20));
+        $randomFactor1 = random_int(0, 40) - 20;
+        $randomFactor2 = random_int(0, 40) - 20;
+        $homeAdvantage = random_int(0, 10);
 
+        $team1ExpectedGoals = (($homeTeam->getAttribute('power') + $randomFactor1 + $homeAdvantage - 25) / 20);
+        $team2ExpectedGoals = (($awayTeam->getAttribute('power') + $randomFactor2 - 25) / 20);
+
+        $team1Goals = max(0, (int)($team1ExpectedGoals));
+        $team2Goals = max(0, (int)($team2ExpectedGoals));
+
+        print_r($team1Goals.'---'. $team2Goals);
         return [$team1Goals, $team2Goals];
     }
 

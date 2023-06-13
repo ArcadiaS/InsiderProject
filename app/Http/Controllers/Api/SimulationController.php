@@ -99,6 +99,7 @@ class SimulationController extends Controller
     {
         $currentWeek->matches()->each(function (Competition $competition) {
             $simulateMatch = Helper::simulateMatch($competition->home_team, $competition->away_team);
+            dd($simulateMatch);
             $competition->update([
                 'home_team_goals' => $simulateMatch[0],
                 'away_team_goals' => $simulateMatch[1],
