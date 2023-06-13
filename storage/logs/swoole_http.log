@@ -519,3 +519,19 @@ PHP_VERSION : 8.2.7
 [2023-06-13 07:24:00 #39.0]	INFO	Server is reloading all workers now
 [2023-06-13 07:24:01 #39.0]	INFO	Server is reloading all workers now
 [2023-06-13 07:26:36 #37.11]	WARNING	Socket::ssl_accept(): bad SSL client[172.23.0.1:48952], reason=294, error_string=unexpected eof while reading
+[2023-06-13 07:27:57 #39.0]	INFO	Server is reloading all workers now
+[2023-06-13 07:28:02 #39.0]	INFO	Server is reloading all workers now
+[2023-06-13 07:28:07 #39.0]	INFO	Server is reloading all workers now
+[2023-06-13 07:28:47 #39.0]	INFO	Server is reloading all workers now
+[2023-06-13 07:30:07 #39.0]	INFO	Server is reloading all workers now
+[2023-06-13 07:30:16 #39.0]	INFO	Server is reloading all workers now
+[2023-06-13 07:30:19 #39.0]	INFO	Server is reloading all workers now
+[2023-06-13 07:31:05 #39.0]	INFO	Server is reloading all workers now
+[2023-06-13 07:32:28 #39.0]	INFO	Server is reloading all workers now
+[2023-06-13 07:34:58 #39.0]	INFO	Server is reloading all workers now
+[2023-06-13 07:35:38 #39.0]	INFO	Server is reloading all workers now
+[2023-06-13 07:35:54 #39.0]	INFO	Server is reloading all workers now
+[2023-06-13 07:36:03 #39.0]	INFO	Server is reloading all workers now
+[2023-06-13 07:36:43 #39.0]	INFO	Server is reloading all workers now
+[2023-06-13 07:37:08 #39.0]	INFO	Server is reloading all workers now
+[2023-06-13 07:37:44 #39.0]	INFO	Server is reloading all workers now

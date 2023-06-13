@@ -14,8 +14,8 @@ class SeasonController extends Controller
     public function index(IndexSeasonRequest $request): AnonymousResourceCollection
     {
         $seasons = Season::query()
-                         ->with('league')
-                         ->whereHas('league', function ($query) use ($request) {
+                         ->with('leagues')
+                         ->whereHas('leagues', function ($query) use ($request) {
                              return $query->where('id', $request->get('league_id'));
                          })
                          ->get();
