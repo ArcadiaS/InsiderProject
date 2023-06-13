@@ -151,11 +151,6 @@ class Helper
                 continue;
             }
 
-            if ($remainingWeeks == 0 && $standing['team']->id == collect(array_values($standings))->sortBy([['points', 'desc'], ['goal_difference', 'desc']])->first()['team']['id']){
-                $standing['championship_chance'] = 100;
-                continue;
-            }
-
             $pointDifference = $currentLeaderPoints - $standing['points'];
             $pointsFactor = $standing['points'] / ( $currentLeaderPoints + exp($pointDifference)) ;
 
@@ -165,10 +160,10 @@ class Helper
             $chance = 0;
 
             if ($pointsFactor){
-                $chance += (0.55 * $pointsFactor);
+                $chance += (0.55 * $pointsFactor) + (0.3 * $teamPower);
             }
             if ($goalDifferenceFactor){
-                $chance +=  (0.15 * $goalDifferenceFactor);
+                $chance +=  (0.15 * $goalDifferenceFactor) + (0.3 * $teamPower);
             }
             if (!$pointsFactor || !$goalDifferenceFactor){
                 $chance = $teamPower;
@@ -178,6 +173,15 @@ class Helper
             $chance = min(1, $chance) * 100;
 
             $standing['championship_chance'] = round($chance);
+        }
+        unset($standing);
+
+        $sumOfChances = array_sum(array_column($standings, 'championship_chance'));
+        foreach ($standings as &$standing) {
+            if ($sumOfChances > 0) {
+                $chance = ($standing['championship_chance'] / $sumOfChances) * 100;
+                $standing['championship_chance'] = round($chance);
+            }
         }
         unset($standing);
 

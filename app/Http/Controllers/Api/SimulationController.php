@@ -29,7 +29,6 @@ class SimulationController extends Controller
 
         $league->prepareSchedule();
 
-
         return response()->noContent();
     }
 
@@ -67,7 +66,7 @@ class SimulationController extends Controller
                               ->whereHas('matches', function ($query) {
                                   return $query->where('is_played', 0);
                               })
-                              ->first();
+                              ->firstOrFail();
 
         $this->simulateEachMatch($currentWeek);
 
@@ -84,6 +83,10 @@ class SimulationController extends Controller
                             return $query->IsActive();
                         })
                         ->firstOrFail();
+
+        $league->update([
+           'current_week' => 1
+        ]);
 
         $league->competition_matches()->update([
             'home_team_goals' => 0,
@@ -108,9 +111,8 @@ class SimulationController extends Controller
                 'match_date'      => Carbon::now(),
                 'is_played'       => true,
             ]);
-            $competition->league()->update([
-                'current_week' => $competition->competition_week()->first()?->getAttribute('week_number')
-            ]);
+            $competition->league()->increment('current_week');
+
             event(new MatchPlayedEvent($competition));
         });
     }

@@ -6,7 +6,6 @@
           <el-card class="box-card">
             <template #header>
               <div class="card-header">
-                <span>League Name</span>
                 <el-row>
                   <el-col :span="4">
                     <el-select v-model="mainStore.filters.league_id" class="m-2" placeholder="Select" size="large"
@@ -20,7 +19,8 @@
                     </el-select>
                   </el-col>
                   <el-col :span="4">
-                    <el-select v-model="mainStore.filters.season_id" class="m-2" placeholder="Select" size="large">
+                    <el-select v-model="mainStore.filters.season_id" class="m-2" placeholder="Select" size="large"
+                    @change="selectSeason">
                       <el-option
                           v-for="item in mainStore.seasons"
                           :key="item.id"
@@ -30,17 +30,18 @@
                     </el-select>
                   </el-col>
                   <el-col :span="4">
-                    <el-select v-model="mainStore.filters.week_number" class="m-2" placeholder="Select" size="large">
+                    <el-select v-model="mainStore.filters.week_number" class="m-2" placeholder="Select" size="large"
+                               @change="selectWeek">
                       <el-option
                           v-for="item in mainStore.competition_weeks"
-                          :key="item.id"
+                          :key="item.week_number"
                           :label="item.week_number"
                           :value="item.week_number"
                       />
                     </el-select>
                   </el-col>
                   <el-col :span="4">
-                    <el-button class="button" @click="prepareSchedule" type="info">Prepare Schedule</el-button>
+                    <el-button class="button" @click="prepareSchedule" type="info">Submit</el-button>
                   </el-col>
                 </el-row>
               </div>
@@ -103,10 +104,15 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref } from 'vue'
+import { onMounted, ref, reactive } from 'vue'
 import { useMainStore } from '@/stores/MainStore.ts'
 
 const mainStore = useMainStore()
+const filters = reactive({
+  league_id: null,
+  season_id: null,
+  week_number: 1
+})
 
 const PlayAllWeeks = () => {
   mainStore.playAllWeeks()
@@ -121,9 +127,17 @@ const ResetAllData = () => {
 }
 
 const selectLeague = (selectedLeague) => {
-  console.log("selected league", selectedLeague)
-  mainStore.filters.league_id = selectedLeague
-  mainStore.getSeasons()
+  mainStore.league_id = selectedLeague
+  mainStore.submitFilter()
+}
+
+const selectSeason = (selectedSeason) => {
+  mainStore.season_id = selectedSeason
+  mainStore.submitFilter()
+}
+const selectWeek = (selectedWeek) => {
+  mainStore.week_number = selectedWeek
+  mainStore.submitFilter()
 }
 
 const prevWeek = () => {
@@ -134,11 +148,12 @@ const nextWeek = () => {
 }
 
 const prepareSchedule = () => {
-  mainStore.prepareSchedule()
+  mainStore.submitFilter(filters)
+  mainStore.getSeasons()
 }
 
 onMounted(() => {
-  mainStore.getData([])
+  mainStore.getData()
 })
 
 </script>

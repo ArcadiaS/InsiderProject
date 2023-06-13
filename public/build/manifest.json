@@ -1,6 +1,6 @@
 {
   "resources/js/app.ts": {
-    "file": "assets/app.12c74f4f.js",
+    "file": "assets/app.8634cd68.js",
     "src": "resources/js/app.ts",
     "isEntry": true,
     "dynamicImports": [
@@ -11,7 +11,7 @@
     ]
   },
   "resources/js/src/views/Home.vue": {
-    "file": "assets/Home.add2ebcd.js",
+    "file": "assets/Home.13b917b3.js",
     "src": "resources/js/src/views/Home.vue",
     "isDynamicEntry": true,
     "imports": [

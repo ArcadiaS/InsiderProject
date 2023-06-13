@@ -7,7 +7,6 @@
 </head>
 <body>
 <div id="app"></div>
-q23q222
 @vite(['resources/js/app.ts'])
 </body>
 </html>
