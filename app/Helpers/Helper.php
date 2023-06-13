@@ -202,7 +202,6 @@ class Helper
         $team1Goals = max(0, (int)($team1ExpectedGoals));
         $team2Goals = max(0, (int)($team2ExpectedGoals));
 
-        print_r($team1Goals . '---' . $team2Goals);
         return [$team1Goals, $team2Goals];
     }
 

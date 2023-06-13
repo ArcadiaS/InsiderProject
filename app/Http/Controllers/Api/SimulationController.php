@@ -27,11 +27,12 @@ class SimulationController extends Controller
                         ->firstOrFail();
 
 
-            $league->prepareSchedule();
+        $league->prepareSchedule();
 
 
         return response()->noContent();
     }
+
     public function playAllWeeks(PlayAllWeeksRequest $request): \Illuminate\Http\Response
     {
         /** @var League $league */
@@ -62,8 +63,10 @@ class SimulationController extends Controller
 
         /** @var CompetitionWeek $currentWeek */
         $currentWeek = $league->competition_weeks()
-                              ->where('is_played', 0)
-                              ->orderBy('week_number')
+                              ->where('week_number', $league->current_week)
+                              ->whereHas('matches', function ($query) {
+                                  return $query->where('is_played', 0);
+                              })
                               ->first();
 
         $this->simulateEachMatch($currentWeek);
