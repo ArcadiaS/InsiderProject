@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "strict": false,
+    "allowJs": true,
+    "noImplicitAny": false,
+    "types": ["vite/client", "element-plus/global"],
+    "paths": {
+      "@/*": ["resources/js/*"]
+    },
+    "baseUrl": ".",
+    "module": "ESNext",
+    "resolveJsonModule": true,
+    "jsx": "preserve",
+    "jsxImportSource": "vue",
+    "noImplicitThis": true,
+    "verbatimModuleSyntax": true,
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true
+  },
+  "include": [
+    "resources/**/*.ts",
+    "resources/**/*.d.ts",
+    "resources/**/*.vue"
+  ]
+}

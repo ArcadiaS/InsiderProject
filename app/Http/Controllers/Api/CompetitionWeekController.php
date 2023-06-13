@@ -13,7 +13,7 @@ class CompetitionWeekController extends Controller
 {
     public function index(IndexCompetitionWeekRequest $request): AnonymousResourceCollection
     {
-        $competitionWeeks = CompetitionWeek::query()
+        $competitionWeeks = CompetitionWeek::query()->with('matches')
                                            ->where('league_id', $request->get('league_id'));
 
         if ($request->has('week_number') and $request->filled('week_number')){

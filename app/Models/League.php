@@ -39,6 +39,13 @@ class League extends Model
         return $this->hasMany(CompetitionWeek::class);
     }
 
+    public function current_week_competitions()
+    {
+        return $this->hasMany(Competition::class)->whereHas('competition_week', function ($query){
+           return $query->where('week_number', $this->current_week);
+        });
+    }
+
     public function prepareSchedule(): void
     {
         Helper::roundRobinAlgorithm($this);

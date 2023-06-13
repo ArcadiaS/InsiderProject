@@ -11,7 +11,7 @@ class LeagueController extends Controller
 {
     public function index(): AnonymousResourceCollection
     {
-        $leagues = League::query()->with(['season', 'teams', 'competition_weeks'])->get();
+        $leagues = League::query()->with(['season', 'teams', 'competition_weeks.matches', 'competition_matches'])->get();
 
         return LeagueResource::collection($leagues);
     }

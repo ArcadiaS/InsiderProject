@@ -15,7 +15,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::apiResource('seasons', SeasonController::class)->only('index');
 Route::apiResource('leagues', LeagueController::class)->only('index');
-Route::apiResource('competitions', CompetitionController::class)->only('index');
+Route::apiResource('competitions', CompetitionController::class)->only('update');
 Route::apiResource('competition-weeks', CompetitionWeekController::class)->only('index');
 Route::apiResource('standings', StandingController::class);
 Route::post('prepare-league-schedule', [SimulationController::class, 'prepareLeagueSchedule']);

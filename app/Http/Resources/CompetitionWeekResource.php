@@ -17,6 +17,7 @@ class CompetitionWeekResource extends JsonResource
         return [
             'id'          => $this->id,
             'week_number' => $this->week_number,
+            'competitions' => CompetitionResource::collection($this->whenLoaded('matches'))
         ];
     }
 }
