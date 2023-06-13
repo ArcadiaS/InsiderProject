@@ -24,21 +24,26 @@ class Helper
                 $homeTeam = $teams[$j];
                 $awayTeam = $teams[$numTeams - 1 - $j];
 
-                if ($j === 0) {
-                    $awayTeam = $teams[$i];
-                } else if ($j <= $i) {
-                    $temp = $homeTeam;
-                    $homeTeam = $awayTeam;
-                    $awayTeam = $temp;
-                }
-
                 $matchWeek[] = ['home_team_id' => $homeTeam, 'away_team_id' => $awayTeam];
             }
-
             shuffle($matchWeek);
             $matchWeeks[] = $matchWeek;
 
-            $teams[] = array_shift($teams);
+            $slice1 = array_slice($teams, 1, 1);
+            $slice2 = array_slice($teams, 2);
+            $teams = array_merge([array_shift($teams)], $slice2, $slice1);
+        }
+
+        foreach ($matchWeeks as $matchWeek) {
+            $returnMatchWeek = [];
+            foreach ($matchWeek as $match) {
+                $returnMatchWeek[] = [
+                    'home_team_id' => $match['away_team_id'],
+                    'away_team_id' => $match['home_team_id']
+                ];
+            }
+            shuffle($returnMatchWeek);
+            $matchWeeks[] = $returnMatchWeek;
         }
 
         foreach ($matchWeeks as $weekNumber => $matches) {

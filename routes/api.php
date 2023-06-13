@@ -18,6 +18,7 @@ Route::apiResource('leagues', LeagueController::class)->only('index');
 Route::apiResource('competitions', CompetitionController::class)->only('index');
 Route::apiResource('competition-weeks', CompetitionWeekController::class)->only('index');
 Route::apiResource('standings', StandingController::class);
+Route::post('prepare-league-schedule', [SimulationController::class, 'prepareLeagueSchedule']);
 Route::post('play-all-weeks', [SimulationController::class, 'playAllWeeks']);
 Route::post('play-week-by-week', [SimulationController::class, 'playWeekByWeek']);
 Route::post('reset-all-data', [SimulationController::class, 'resetAllCompetitions']);

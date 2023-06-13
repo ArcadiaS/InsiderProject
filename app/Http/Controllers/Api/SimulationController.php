@@ -7,6 +7,7 @@ use App\Helpers\Helper;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\PlayAllWeeksRequest;
 use App\Http\Requests\PlayWeekByWeekRequest;
+use App\Http\Requests\PrepareLeagueScheduleRequest;
 use App\Http\Requests\ResetAllCompetitionRequest;
 use App\Models\Competition;
 use App\Models\CompetitionWeek;
@@ -15,6 +16,22 @@ use Carbon\Carbon;
 
 class SimulationController extends Controller
 {
+    public function prepareLeagueSchedule(PrepareLeagueScheduleRequest $request): \Illuminate\Http\Response
+    {
+        /** @var League $league */
+        $league = League::query()
+                        ->where('id', $request->get('league_id'))
+                        ->whereHas('season', function ($query) {
+                            return $query->IsActive();
+                        })
+                        ->firstOrFail();
+
+
+            $league->prepareSchedule();
+
+
+        return response()->noContent();
+    }
     public function playAllWeeks(PlayAllWeeksRequest $request): \Illuminate\Http\Response
     {
         /** @var League $league */

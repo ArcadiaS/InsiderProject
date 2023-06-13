@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Helpers\Helper;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -36,6 +37,11 @@ class League extends Model
     public function competition_weeks(): HasMany
     {
         return $this->hasMany(CompetitionWeek::class);
+    }
+
+    public function prepareSchedule(): void
+    {
+        Helper::roundRobinAlgorithm($this);
     }
 
 }
